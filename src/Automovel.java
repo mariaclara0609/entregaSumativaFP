@@ -59,4 +59,15 @@ public class Automovel {
         this.cilindrada = cilindrada;
     }
 
+    public String toString() {
+        StringBuilder automovel = new StringBuilder();
+        automovel.append("O automóvel com matrícula ");
+        automovel.append(matricula);
+        automovel.append(" é um ");
+        automovel.append(marca);
+        automovel.append(" de ");
+        automovel.append(cilindrada);
+        automovel.append(" cc.");
+        return automovel.toString();
+    }
 }

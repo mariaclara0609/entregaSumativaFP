@@ -8,4 +8,31 @@ public class Automovel {
     private static final int CILINDRADA_POR_OMISSAO = 0;
 
     private static int totalAutomoveis = 0;
+
+    public Automovel() {
+        matricula = MATRICULA_POR_OMISSAO;
+        marca = MARCA_POR_OMISSAO;
+        cilindrada = CILINDRADA_POR_OMISSAO;
+        totalAutomoveis++;
+    }
+
+    public Automovel(String matricula, String marca, int cilindrada) {
+        this.matricula = matricula;
+        this.marca = marca;
+        this.cilindrada = cilindrada;
+        totalAutomoveis++;
+    }
+
+    public Automovel(String matricula, String marca) {
+        this.matricula = matricula;
+        this.marca = marca;
+        totalAutomoveis++;
+    }
+
+    public Automovel(String marca, int cilindrada) {
+        this.marca = marca;
+        this.cilindrada = cilindrada;
+        totalAutomoveis++;
+    }
+
 }

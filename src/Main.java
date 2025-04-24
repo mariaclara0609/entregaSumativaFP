@@ -2,14 +2,32 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Automovel a1 = new Automovel("11-11-AA","Toyota",1400);
+        System.out.println(a1);
+        System.out.println("Matrícula do automóvel 1: " + a1.getMatricula() );
+        System.out.println("Total de automóveis: " + Automovel.getTotalAutomoveis() + "\n");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        Automovel a2 = new Automovel("22-22-BB", "Fiat");
+        System.out.println(a2);
+        a2.setCilindrada(1800);
+        System.out.println(a2);
+        System.out.println("Total de automóveis: " + Automovel.getTotalAutomoveis() + "\n");
+
+
+        if (a2.calcularDiferencaCilindrada(a1)<0) {
+            System.out.println("Diferença de cilindrada: " + a2.calcularDiferencaCilindrada(a1)*(-1));
         }
+        else {
+            System.out.println("Diferença de cilindrada: " + a2.calcularDiferencaCilindrada(a1));
+        }
+
+        if (!a2.isCilindradaMaior(a1)) {
+            System.out.println("Matrícula do automóvel com maior cilindrada: " + a1.getMatricula());
+        }
+        else {
+            System.out.println("Matrícula do automóvel com maior cilindrada: " + a2.getMatricula());
+        }
+
+        a1.isCilindradaMaior(2000);
     }
 }

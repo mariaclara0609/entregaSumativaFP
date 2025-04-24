@@ -70,4 +70,26 @@ public class Automovel {
         automovel.append(" cc.");
         return automovel.toString();
     }
+
+    public int calcularDiferencaCilindrada(Automovel outroAutomovel) {
+        return this.cilindrada - outroAutomovel.getCilindrada();
+    }
+
+    public boolean isCilindradaMaior(Automovel outroAutomovel) {
+        if (this.cilindrada > outroAutomovel.getCilindrada()) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isCilindradaMaior(int cilindrada) {
+        if (this.cilindrada > cilindrada) {
+            return true;
+        }
+        return false;
+    }
+
+    public static int getTotalAutomoveis() {
+        return totalAutomoveis;
+    }
 }
